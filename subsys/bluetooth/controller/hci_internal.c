@@ -1006,6 +1006,8 @@ static uint8_t vs_cmd_put(uint8_t const * const cmd,
 	case SDC_HCI_OPCODE_CMD_VS_PERIPHERAL_LATENCY_MODE_SET:
 		return sdc_hci_cmd_vs_peripheral_latency_mode_set((void *)cmd_params);
 #endif
+    case SDC_HCI_OPCODE_CMD_VS_SWITCH_TO_CODED_PHY:
+		return sdc_hci_cmd_vs_switch_to_coded_phy((void *)cmd_params);
 	default:
 		return BT_HCI_ERR_UNKNOWN_CMD;
 	}
